@@ -3,41 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Reservations</title>
+     <title>Reservations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" type="text/css" href="travel.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <link rel="icon" href="travel.png">
-   <style type="text/css">
-      body{
-        background-color: white;
-      }
-      
-    </style>
 </head>
- <header>
- 
-      <img class="imageheader" src="travel.PNG" alt="megatravel" align="left" width="145" height="145">
-<div class="wrapper">
-      <nav role="navigation">
-        <h1><a href="travelindex.html">Mega Travel</a></h1>
-       <ul class="nav-ul">
-        <li><a href="travelindex.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="reservations.html">Reservations</a></li>
-      </ul>
-	  <a href="aboutus.html"><a/>
-	  <a href="travelindex.html"><a/>
-     </nav>
-</div>
- </header>
-
- <body>
+<body>
+<style>
+  h1 {
+   color: black;
+   text-align: justify;
+   margin-top: 60px;
+  }
+ .form-group {
+   width: 400px;
+   display: inline-box;
+   text-align: center;
+    }
+body {
+  background-color: #DCDCDC;
+  text-align: center;
+}
+.navbar-brand {
+      position: absolute;
+      left: 0;
+      margin: auto;
+    }
+</style>
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="travelindex.html">
+    <img src="travel.png" style="width: 70px; height: 55px;" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="travelindex.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="reservations.html">Reservations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus.html">About Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
   <div class="container">
- <div class="col-4">
-  <h1><strong>Book a Reservation</strong></h1>
+    <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
+  <h1><strong>Reservation Information</strong></h1>
     <form action="contactform.php" method="post" id="reservationform">
 
     <div class="form-group">
@@ -67,7 +89,7 @@
 
     <div class="form-group">
       <label for="city">City</label>
-      <select name="city" id="city"  style="width: 250px" class="form-control">
+      <select name="city" id="city" class="form-control">
       <option selected disabled>Select</option>
       <option value="Brisbane">Brisbane</option>
       <option value="Vancouver">Vancouver</option>
@@ -79,27 +101,29 @@
 
     <div class="form-group">
       <label for="activity">Activity</label>
-      <select name="activity" id="activity" style="width: 250px" class="form-control">
+      <select name="activity" id="activity" class="form-control">
       <option selected disabled>Select</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="traveldate">Travel Date</label>
-      <input type="date" name="traveldate" id="traveldate" style="width: 250px" class="form-control">
+      <input type="date" name="traveldate" id="traveldate" class="form-control">
     </div>
 
-  <div class="form-group">
-  <button type="submit" form="reservationform" value="Submit" style="width: 100px">Submit</button><br>
-  </div>
+    <div class="form-group">
+    <button type="submit" form="reservationform" value="Submit" style="width: 100px">Submit</button><br>
+    </div>
   
-  <div class="form-group">
-  <button type="reset" value="Reset" style="width: 100px" >Reset</button>
+    <div class="form-group">
+    <button type="reset" value="Reset"  style="width: 100px" >Reset</button>
+    </div>
+    </div>
+    </div>
+    </div>
 
   </form>
+  <script src="megatravel.js"></script>
 
-  </div>
-  </div>
-<script src="megatravel.js"></script>
   </body>
 </html>
